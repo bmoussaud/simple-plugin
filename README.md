@@ -131,8 +131,8 @@ batch.Server
 </udm.DeploymentPackage>
 ```
 
-![MyBatch/1.1 : initial deployment - mapping ](images/batch-11-mapping)
-![MyBatch/1.1 : initial deployment - task ](images/batch-11-task)
+![MyBatch/1.1 : initial deployment - mapping ](images/batch-11-mapping.png)
+![MyBatch/1.1 : initial deployment - task ](images/batch-11-task.png)
 
 The deployment plan looks ok but when it reaches the last step, there is an error:
 
@@ -247,8 +247,8 @@ deployit-manifest.xml
 </udm.DeploymentPackage>
 ```
 
-![MyBatch/1.2 : initial deployment - mapping ](images/batch-12-mapping)
-![MyBatch/1.2 : initial deployment - task ](images/batch-12-task)
+![MyBatch/1.2 : initial deployment - mapping ](images/batch-12-mapping.png)
+![MyBatch/1.2 : initial deployment - task ](images/batch-12-task.png)
 
 
 
