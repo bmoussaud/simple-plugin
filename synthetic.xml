@@ -33,35 +33,32 @@
     </type>
 
 
-
-	<!-- BATCH SERVER -->
-	<type type="batch.Server" extends="generic.Container" description="Define a batch server, typically a configurable standalone process">
+	<!-- SIMPLE SERVER -->
+	<type type="simple.Server" extends="generic.Container" description="Define a simple server, typically a configurable standalone process">
 		<property name="home" description="Batch'server home"/>
 		<property name="configurationDirectory" default="${container.home}/config"/>
-		<property name="startCommand" description="Command to start the batch server"/>
-		<property name="stopCommand" description="Command to stop the batch server"/>
-		<property name="startScript" hidden="true" default="batch/start" />
-		<property name="stopScript" hidden="true" default="batch/stop" />
+		<property name="startCommand" description="Command to start the simple server"/>
+		<property name="stopCommand" description="Command to stop the simple server"/>
+		<property name="startScript" hidden="true" default="simple/start" />
+		<property name="stopScript" hidden="true" default="simple/stop" />
 		<property name="failIfCommandNotExist" kind="boolean" default="true" category="Advanced"/>
 	</type>
 
-
-	<type type="batch.CopiedArtifact" extends="generic.CopiedArtifact" 
-		container-type="batch.Server" virtual="true">
+	<type type="simple.CopiedArtifact" extends="generic.CopiedArtifact" 
+		container-type="simple.Server" virtual="true">
 		<property name="restartRequired" kind="boolean" default="true" required="false" hidden="false"/>
 		<property name="createTargetDirectory" kind="boolean" default="true" required="false" hidden="false"/>
 	</type>
 
-
-	<type type="batch.CopiedConfiguration" extends="batch.CopiedArtifact" 
-		deployable-type="batch.Configuration" >
-		<generate-deployable type="batch.Configuration" extends="generic.Folder"/>
+	<type type="simple.CopiedConfiguration" extends="simple.CopiedArtifact" 
+		deployable-type="simple.Configuration" >
+		<generate-deployable type="simple.Configuration" extends="generic.Folder"/>
 		<property name="targetDirectory" default="${deployed.container.configurationDirectory}"/>
 	</type>
 
-	<type type="batch.CopiedBinairies" extends="batch.CopiedArtifact" 
-		deployable-type="batch.Binaries" >
-		<generate-deployable type="batch.Binaries" extends="generic.Folder"/>
+	<type type="simple.CopiedBinairies" extends="simple.CopiedArtifact" 
+		deployable-type="simple.Binaries" >
+		<generate-deployable type="simple.Binaries" extends="generic.Folder"/>
 		<property name="targetDirectory" default="${deployed.container.home}/bin"/>
 	</type>
 
