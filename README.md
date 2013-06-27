@@ -1,7 +1,7 @@
 # Simple Container #
 
 Xebialabs provides plugins to deploy either to JEE Application Servers (from Tomcat, the simplest, to WebSphere Application Server, the most complex, including JBoss or Weblogic) or .NET middleware like IIS or BizTalk. 
-But I'm faced more and more to many customers and prospects that have developed their own middleware, an in-house simple container. it is typically a mix with part of the application server and the application itself.
+But I'm faced more and more to many customers and prospects that have developed their own middleware, an in-house simple container. It is typically a mix with a part of an application server and the application itself.
 
 They all share the following traits:
 
@@ -9,7 +9,7 @@ They all share the following traits:
 * They need to be configurated with configuration files
 * Each deployment operations need to stop and to start the process.
 
-Other names of the simple containers are: engine, service, simple,…
+Note: Other names of the simple containers are: engine, service, batch,…
 
 # the 'simple' plugin #
 
@@ -18,6 +18,9 @@ Let's defining the UDM (Unified Deployment Model) to describe
 * the `simple.Server` container
 * the `simple.Artifacts` deployable
 * the `simple.CopiedArfifact` deployed
+
+and using the Deployit's [generic plugin](http://docs.xebialabs.com/releases/latest/deployit/genericPluginManual.html) to create the simple plugin.
+
 
 ## simple.Server
 
@@ -108,7 +111,7 @@ simple.Server
     |       +-- tags
     |       +-- os: UNIX
     |       +-- connectionType: INTERACTIVE_SUDO
-    |       +-- address: deployit.vm    |      
+    |       +-- address: deployit.vm         
     |       +-- username: ubuntu
     |       +-- password: **********
     |       +-- sudoUsername: root
